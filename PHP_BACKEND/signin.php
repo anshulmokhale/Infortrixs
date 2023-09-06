@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($query->execute()) {
         $response = array(
             "message" => "success",
+            "redirect" => "./index.html",
             "status" => "done"
         );
         echo json_encode($response);

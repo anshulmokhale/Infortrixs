@@ -26,6 +26,7 @@ $(document).ready(function () {
                 data: JSON.stringify(FormDeta),
                 success: function (response) {
                     alert("Successfully signed up");
+                    window.location.href = response.redirect;
                 },
                 error: function (error) {
 
