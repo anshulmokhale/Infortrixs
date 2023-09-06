@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include "./connect.php";
 
 header("Content-Type: application/json");
@@ -29,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $query->bindParam(":password", $password);
 
     if ($query->execute()) {
+        $_SESSION["userid"] = $email;
         $response = array(
             "message" => "success",
             "redirect" => "./index.html",

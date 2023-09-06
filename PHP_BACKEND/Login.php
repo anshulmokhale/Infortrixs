@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "./connect.php";
 header("Content-Type:application/json");
 
@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($result !== false && $password === $result["password"]) {
             http_response_code(200);
+            $_SESSION["userid"] = $email;
             $response = array(
                 "message" => "success",
                 "redirect" => "./index.html",
