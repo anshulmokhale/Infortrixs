@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* top part is here */
 .Navigation {
     top: 0;
     left: 0;
@@ -12,32 +13,41 @@
     z-index: 100;
 }
 
-.show {
-    display: none;
+
+
+/* mid part is here */
+.mid {
+    margin-top: 57px;
+    margin-bottom: 55px;
 }
 
 
-.Mid {
-    margin-top: 65px;
-    height: 100vh;
-}
 
 
 
-.msg p {
-    border: 2px solid black;
-
-}
-
+/* bottom part is here */
 .bottom {
     bottom: 0;
     left: 0;
-    position: fixed;
     width: 100%;
+    position: fixed;
     z-index: 100;
 }
 
+form {
+    display: flex;
 
-input[type=email]:not(.browser-default) {
-    width: 90%;
+}
+
+.mb-3 {
+    width: 100%;
+}
+
+.sbmt button {
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 50px;
+    border-radius: 3px;
+    background-color: grey;
 }
