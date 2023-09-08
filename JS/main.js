@@ -8,17 +8,26 @@ $(document).ready(function () {
     }
 
     function displayMessage(email, senderName, message, time) {
+        const date = new Date(time);
+
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+
+        const timePortion = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         var htmlContent;
         if (loged === email) {
             htmlContent = `<div class="box">
                 <h5>${senderName}</h5>
                 <p>${message}</p>
+                <p>${timePortion}</p>
 
             </div>`;
         } else {
             htmlContent = `<div class="box">
                 <h5>${senderName}</h5>
                 <p>${message}</p>
+                <p>${timePortion}</p>
             </div>`;
         }
         $(".mid").append(htmlContent);
