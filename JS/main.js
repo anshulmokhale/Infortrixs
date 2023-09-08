@@ -13,6 +13,7 @@ $(document).ready(function () {
             htmlContent = `<div class="box">
                 <h5>${senderName}</h5>
                 <p>${message}</p>
+
             </div>`;
         } else {
             htmlContent = `<div class="box">
@@ -50,6 +51,13 @@ $(document).ready(function () {
             }
         });
     }
+    function scrollToBottom() {
+        var midDiv = document.querySelector('.mid');
+        midDiv.scrollTop = midDiv.scrollHeight;
+    }
+
+    // Call the scrollToBottom function when the page loads
+    scrollToBottom();
     fetchAndDisplayMessages();
     setInterval(fetchAndDisplayMessages, 500);
 
