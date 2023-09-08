@@ -30,6 +30,6 @@ $(document).ready(function () {
             }
         });
         // console.log(data);
-        // console.log(JSON.stringify(data));
+        console.log(JSON.stringify(data));
     });
 });
