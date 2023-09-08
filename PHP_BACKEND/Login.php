@@ -3,9 +3,7 @@ session_start();
 include "./connect.php";
 header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
-// Allow specific HTTP methods
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-// Allow specific HTTP headers
 header("Access-Control-Allow-Headers: Content-Type");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
